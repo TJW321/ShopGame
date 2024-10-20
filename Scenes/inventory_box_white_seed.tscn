@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6wj15eie8ege"]
+
+[ext_resource type="Script" path="res://Scripts/inventory_box_white_seed.gd" id="1_1djf7"]
+[ext_resource type="Texture2D" uid="uid://d1fqax686o6cd" path="res://Textures/Crate White Seed.png" id="2_cw8oc"]
+
+[node name="WhiteSeedInventoryBox" type="Node2D"]
+
+[node name="WhiteBox" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_1djf7")
+
+[node name="TextureButton" type="TextureButton" parent="WhiteBox"]
+offset_left = 3.0
+offset_top = 2.2
+offset_right = 35.0
+offset_bottom = 34.2
+texture_normal = ExtResource("2_cw8oc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="WhiteBox"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="WhiteBox/TextureButton" to="WhiteBox" method="_on_texture_button_pressed"]

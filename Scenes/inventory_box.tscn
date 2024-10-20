@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl04sw2tod05c"]
+
+[ext_resource type="Script" path="res://Scripts/inventory_box.gd" id="1_r38l1"]
+[ext_resource type="Texture2D" uid="uid://ddjbrl8rta08h" path="res://Textures/Crate Texture Placeholder.png" id="2_budjd"]
+
+[node name="InventoryBox" type="Node2D"]
+
+[node name="InventoryBox" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_r38l1")
+
+[node name="TextureButton" type="TextureButton" parent="InventoryBox"]
+offset_left = 3.0
+offset_top = 2.2
+offset_right = 35.0
+offset_bottom = 34.2
+texture_normal = ExtResource("2_budjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="InventoryBox"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="InventoryBox/TextureButton" to="InventoryBox" method="_on_texture_button_pressed"]

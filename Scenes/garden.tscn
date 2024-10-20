@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlbg0rtjqcmbc"]
+
+[ext_resource type="Script" path="res://Scripts/plot.gd" id="1_ivt33"]
+[ext_resource type="Texture2D" uid="uid://77iggvo3wqqt" path="res://Textures/Untilled Plot Placeholder.png" id="2_rg45u"]
+
+[node name="Garden" type="Node2D"]
+
+[node name="Plot" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_ivt33")
+
+[node name="Timer" type="Timer" parent="Plot"]
+wait_time = 3.0
+one_shot = true
+
+[node name="TextureButton" type="TextureButton" parent="Plot"]
+offset_left = 0.400002
+offset_top = -0.2
+offset_right = 32.4
+offset_bottom = 31.8
+texture_normal = ExtResource("2_rg45u")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Plot"]
+offset_left = 34.6
+offset_top = 2.6
+offset_right = 74.6
+offset_bottom = 25.6
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Plot/Timer" to="Plot" method="_on_timer_timeout"]
+[connection signal="pressed" from="Plot/TextureButton" to="Plot" method="_on_texture_button_pressed"]
