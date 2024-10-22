@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cemlpm8jkxva1"]
+
+[ext_resource type="Texture2D" uid="uid://dcd164hp24evm" path="res://Textures/Seed Crates/Yellow Seed Crate.png" id="1_lxpts"]
+[ext_resource type="Script" path="res://Scripts/inventory_box_yellow_seed.gd" id="1_w8glm"]
+
+[node name="yellowSeedInventoryBox" type="Node2D"]
+
+[node name="yellow  Seed" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_w8glm")
+
+[node name="TextureButton" type="TextureButton" parent="yellow  Seed"]
+offset_left = 3.0
+offset_top = 2.2
+offset_right = 35.0
+offset_bottom = 34.2
+texture_normal = ExtResource("1_lxpts")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="yellow  Seed"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="yellow  Seed/TextureButton" to="yellow  Seed" method="_on_texture_button_pressed"]

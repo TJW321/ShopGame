@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgb0ettwjccie"]
 
 [ext_resource type="Script" path="res://Scripts/inventory_box_white_nut.gd" id="1_deunu"]
-[ext_resource type="Texture2D" uid="uid://ddjbrl8rta08h" path="res://Textures/Crate Texture Placeholder.png" id="2_hyirq"]
+[ext_resource type="Texture2D" uid="uid://dpc2ke8d5ewso" path="res://Textures/Empty Crate/Empty Crate.png" id="2_hyirq"]
 
-[node name="InventoryBox" type="Node2D"]
+[node name="White Nut Inventory Box" type="Node2D"]
 
 [node name="InventoryBox" type="Area2D" parent="."]
 scale = Vector2(5, 5)

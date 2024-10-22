@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlbg0rtjqcmbc"]
 
 [ext_resource type="Script" path="res://Scripts/plot.gd" id="1_ivt33"]
-[ext_resource type="Texture2D" uid="uid://77iggvo3wqqt" path="res://Textures/Untilled Plot Placeholder.png" id="2_rg45u"]
+[ext_resource type="Texture2D" uid="uid://77iggvo3wqqt" path="res://Textures/Plots/Untilled Plot Placeholder.png" id="2_rg45u"]
 
 [node name="Garden" type="Node2D"]
 

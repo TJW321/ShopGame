@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bumsoj1edwtat"]
 
 [ext_resource type="Script" path="res://Scripts/inventory_box_red_seed.gd" id="1_3s7dc"]
-[ext_resource type="Texture2D" uid="uid://dt6nci48rerlb" path="res://Textures/Crate Red Seed.png" id="2_i0jk7"]
+[ext_resource type="Texture2D" uid="uid://bodjbiiwblie1" path="res://Textures/Seed Crates/Red Seed Crate.png" id="2_i0jk7"]
 
 [node name="RedSeedInventoryBox" type="Node2D"]
 

@@ -1,7 +1,7 @@
 extends Area2D
 
-var inventory_count_empty = preload("res://Textures/Crate Texture Placeholder.png")
-var inventory_count_full = preload("res://Textures/Crate Red Seed.png")
+var inventory_count_empty = preload("res://Textures/Empty Crate/Empty Crate.png")
+var inventory_count_full = preload("res://Textures/Nut Crates/Red NUT Crate.png")
 
 #Variable to hold which item is inthe inventory box
 
@@ -20,5 +20,5 @@ func _on_texture_button_pressed():
 		InventorySingleton.inventory_red_nut_count -= 1
 		print("InventorySingleton.inventory_red_nut_count -= 1")
 		InventorySingleton.IsItemPickedUp = true
-		InventorySingleton.WhichItem = preload("res://Textures/pixil-frame-0 (9).png")
-		InventorySingleton._process(1) 
+		InventorySingleton.WhichItem = preload("res://Textures/Nuts/Red Nut.png")
+		InventorySingleton._process(1)

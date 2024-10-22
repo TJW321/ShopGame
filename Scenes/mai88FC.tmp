@@ -1,0 +1,408 @@
+[gd_scene load_steps=25 format=4 uid="uid://ds24mecmnjkor"]
+
+[ext_resource type="PackedScene" uid="uid://dlbg0rtjqcmbc" path="res://Scenes/garden.tscn" id="1_1a6ct"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_o0jmt"]
+[ext_resource type="Texture2D" uid="uid://bqn8180osgama" path="res://Textures/Floors/Workshop Floor Placeholder.png" id="2_kqjqs"]
+[ext_resource type="Texture2D" uid="uid://wh0gdhc8304x" path="res://Textures/Walls and Doors/Door.png" id="3_58e0k"]
+[ext_resource type="Texture2D" uid="uid://bhoolvx7t1dt3" path="res://Textures/Floors/Grass Floor.png" id="5_bcml2"]
+[ext_resource type="Texture2D" uid="uid://bpe06fqkmk35y" path="res://Textures/Floors/Shop Floor Placeholder.png" id="5_uxjy4"]
+[ext_resource type="PackedScene" uid="uid://b6wj15eie8ege" path="res://Scenes/inventory_box_white_seed.tscn" id="8_rvcl8"]
+[ext_resource type="PackedScene" uid="uid://bumsoj1edwtat" path="res://Scenes/inventory_box_red_seed.tscn" id="9_hk41p"]
+[ext_resource type="PackedScene" uid="uid://bq1ka6bwhnha8" path="res://Scenes/inventory_box_Red_Nut.tscn" id="10_xm0as"]
+[ext_resource type="PackedScene" uid="uid://bgb0ettwjccie" path="res://Scenes/inventory_box_White_Nut.tscn" id="11_78ygq"]
+[ext_resource type="PackedScene" uid="uid://b2ujv8yi71wwb" path="res://Scenes/Crafting Table.tscn" id="11_n1xgs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_78kcn"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amjua"]
+texture = ExtResource("5_bcml2")
+use_texture_padding = false
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlhp7"]
+texture = ExtResource("2_kqjqs")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chsbf"]
+texture = ExtResource("5_uxjy4")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bsd4d"]
+sources/0 = SubResource("TileSetAtlasSource_amjua")
+sources/1 = SubResource("TileSetAtlasSource_vlhp7")
+sources/2 = SubResource("TileSetAtlasSource_chsbf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_iq3td"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gnjca"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_aj0iy"]
+resource_name = "GardenToWorkshop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GardenView:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1080)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WorkshopView:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShopView:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 2160), Vector2(0, 1080)]
+}
+
+[sub_resource type="Animation" id="Animation_5bo82"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GardenView:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WorkshopView:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShopView:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2160)]
+}
+
+[sub_resource type="Animation" id="Animation_p2nhg"]
+resource_name = "ShopToWorkshop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GardenView:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -2160), Vector2(0, -1080)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WorkshopView:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShopView:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1080)]
+}
+
+[sub_resource type="Animation" id="Animation_nyltp"]
+resource_name = "WorkshopToGarden"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GardenView:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WorkshopView:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShopView:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 2160)]
+}
+
+[sub_resource type="Animation" id="Animation_mmwwo"]
+resource_name = "WorkshopToShop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GardenView:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, -2160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WorkshopView:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShopView:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bsla1"]
+_data = {
+"GardenToWorkshop": SubResource("Animation_aj0iy"),
+"RESET": SubResource("Animation_5bo82"),
+"ShopToWorkshop": SubResource("Animation_p2nhg"),
+"WorkshopToGarden": SubResource("Animation_nyltp"),
+"WorkshopToShop": SubResource("Animation_mmwwo")
+}
+
+[node name="Main" type="Node"]
+script = ExtResource("1_o0jmt")
+
+[node name="PickedUpItem" type="Node2D" parent="."]
+position = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="PickedUpItem"]
+z_index = 2
+position = Vector2(1, 1)
+scale = Vector2(5, 5)
+
+[node name="GardenView" type="Node2D" parent="."]
+
+[node name="Garden" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(122, 56)
+
+[node name="Garden2" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(372, 62)
+
+[node name="Garden3" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(128, 279)
+
+[node name="Garden4" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(382, 276)
+
+[node name="Garden5" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(140, 490)
+
+[node name="Door To Workshop" type="TextureButton" parent="GardenView"]
+offset_left = 96.0
+offset_top = 904.0
+offset_right = 128.0
+offset_bottom = 936.0
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_58e0k")
+
+[node name="Garden View Label" type="Label" parent="GardenView"]
+offset_left = 1423.0
+offset_top = 962.0
+offset_right = 1522.0
+offset_bottom = 985.0
+scale = Vector2(5, 5)
+text = "Garden View"
+label_settings = SubResource("LabelSettings_78kcn")
+
+[node name="Seed Boxes Label" type="Label" parent="GardenView"]
+offset_left = 951.0
+offset_top = 9.0
+offset_right = 1050.0
+offset_bottom = 32.0
+scale = Vector2(5, 5)
+text = "Seed Boxes"
+label_settings = SubResource("LabelSettings_78kcn")
+
+[node name="Inventory Boxes Label" type="Label" parent="GardenView"]
+offset_left = 942.0
+offset_top = 471.0
+offset_right = 1041.0
+offset_bottom = 494.0
+scale = Vector2(5, 5)
+text = "Inventory Boxes"
+label_settings = SubResource("LabelSettings_78kcn")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="GardenView"]
+z_index = -2
+position = Vector2(0, 1080)
+scale = Vector2(6, 6)
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAACAAAAAQAAAAAAAAACAAEAAQAAAAEAAAADAAAAAQABAAAAAAADAAEAAQABAAEAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAEAAAAFAAAAAQABAAAAAAAFAAEAAQABAAEAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAEAAAAHAAAAAQABAAAAAAAHAAEAAQABAAEAAAAIAAAAAQAAAAAAAAAIAAEAAQAAAAEAAAAJAAAAAQABAAAAAAAJAAEAAQABAAEAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAEAAAALAAAAAQABAAAAAAALAAEAAQABAAEAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAEAAAANAAAAAQABAAAAAAANAAEAAQABAAEAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAEAAAAPAAAAAQABAAAAAAAPAAEAAQABAAEAAAAQAAAAAQAAAAAAAAAQAAEAAQAAAAEAAAARAAAAAQABAAAAAAARAAEAAQABAAEAAAASAAAAAQAAAAAAAAASAAEAAQAAAAEAAAATAAAAAQABAAAAAAATAAEAAQABAAEAAAASAAIAAQAAAAAAAAASAAMAAQAAAAEAAAATAAIAAQABAAAAAAATAAMAAQABAAEAAAASAAQAAQAAAAAAAAASAAUAAQAAAAEAAAATAAQAAQABAAAAAAATAAUAAQABAAEAAAASAAYAAQAAAAAAAAASAAcAAQAAAAEAAAATAAYAAQABAAAAAAATAAcAAQABAAEAAAASAAgAAQAAAAAAAAASAAkAAQAAAAEAAAATAAgAAQABAAAAAAATAAkAAQABAAEAAAASAAoAAQAAAAAAAAASAAsAAgAAAAAAAAATAAoAAQABAAAAAAATAAsAAgABAAAAAAAQAAoAAQAAAAAAAAAQAAsAAgAAAAAAAAARAAoAAQABAAAAAAARAAsAAgABAAAAAAAOAAoAAQAAAAAAAAAOAAsAAgAAAAAAAAAPAAoAAQABAAAAAAAPAAsAAgABAAAAAAAMAAoAAQAAAAAAAAAMAAsAAgAAAAAAAAANAAoAAQABAAAAAAANAAsAAgABAAAAAAAKAAoAAQAAAAAAAAAKAAsAAgAAAAAAAAALAAoAAQABAAAAAAALAAsAAgABAAAAAAAIAAoAAQAAAAAAAAAIAAsAAgAAAAAAAAAJAAoAAQABAAAAAAAJAAsAAgABAAAAAAAGAAoAAQAAAAAAAAAGAAsAAgAAAAAAAAAHAAoAAQABAAAAAAAHAAsAAgABAAAAAAAEAAoAAQAAAAAAAAAEAAsAAgAAAAAAAAAFAAoAAQABAAAAAAAFAAsAAgABAAAAAAACAAoAAQAAAAAAAAACAAsAAgAAAAAAAAADAAoAAQABAAAAAAADAAsAAgABAAAAAAAAAAoAAQAAAAAAAAAAAAsAAgAAAAAAAAABAAoAAQABAAAAAAABAAsAAgABAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAEAAAABAAgAAQABAAAAAAABAAkAAQABAAEAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAEAAAABAAYAAQABAAAAAAABAAcAAQABAAEAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAEAAAABAAQAAQABAAAAAAABAAUAAQABAAEAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAEAAAABAAIAAQABAAAAAAABAAMAAQABAAEAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAEAAAARAAIAAQABAAAAAAARAAMAAQABAAEAAAAOAAIAAQAAAAAAAAAOAAMAAQAAAAEAAAAPAAIAAQABAAAAAAAPAAMAAQABAAEAAAAMAAIAAQAAAAAAAAAMAAMAAQAAAAEAAAANAAIAAQABAAAAAAANAAMAAQABAAEAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAEAAAALAAIAAQABAAAAAAALAAMAAQABAAEAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAEAAAAJAAIAAQABAAAAAAAJAAMAAQABAAEAAAAGAAIAAQAAAAAAAAAGAAMAAQAAAAEAAAAHAAIAAQABAAAAAAAHAAMAAQABAAEAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAEAAAAFAAIAAQABAAAAAAAFAAMAAQABAAEAAAACAAIAAQAAAAAAAAACAAMAAQAAAAEAAAADAAIAAQABAAAAAAADAAMAAQABAAEAAAACAAQAAQAAAAAAAAACAAUAAQAAAAEAAAADAAQAAQABAAAAAAADAAUAAQABAAEAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAEAAAAFAAQAAQABAAAAAAAFAAUAAQABAAEAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAEAAAAHAAQAAQABAAAAAAAHAAUAAQABAAEAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAEAAAAJAAQAAQABAAAAAAAJAAUAAQABAAEAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAEAAAALAAQAAQABAAAAAAALAAUAAQABAAEAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAEAAAANAAQAAQABAAAAAAANAAUAAQABAAEAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAEAAAAPAAQAAQABAAAAAAAPAAUAAQABAAEAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAEAAAARAAQAAQABAAAAAAARAAUAAQABAAEAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAEAAAARAAYAAQABAAAAAAARAAcAAQABAAEAAAAOAAYAAQAAAAAAAAAOAAcAAQAAAAEAAAAPAAYAAQABAAAAAAAPAAcAAQABAAEAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAEAAAANAAYAAQABAAAAAAANAAcAAQABAAEAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAEAAAALAAYAAQABAAAAAAALAAcAAQABAAEAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAEAAAAJAAYAAQABAAAAAAAJAAcAAQABAAEAAAACAAYAAQAAAAAAAAACAAcAAQAAAAEAAAADAAYAAQABAAAAAAADAAcAAQABAAEAAAACAAgAAQAAAAAAAAACAAkAAQAAAAEAAAADAAgAAQABAAAAAAADAAkAAQABAAEAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAEAAAAFAAgAAQABAAAAAAAFAAkAAQABAAEAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAEAAAAHAAgAAQABAAAAAAAHAAkAAQABAAEAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAEAAAAJAAgAAQABAAAAAAAJAAkAAQABAAEAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAEAAAALAAgAAQABAAAAAAALAAkAAQABAAEAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAEAAAANAAgAAQABAAAAAAANAAkAAQABAAEAAAAOAAgAAQAAAAAAAAAOAAkAAQAAAAEAAAAPAAgAAQABAAAAAAAPAAkAAQABAAEAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAEAAAARAAgAAQABAAAAAAARAAkAAQABAAEAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAEAAAAHAAYAAQABAAAAAAAHAAcAAQABAAEAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAEAAAAFAAYAAQABAAAAAAAFAAcAAQABAAEAAAAAAAwAAgAAAAEAAAAAAA0AAgAAAAAAAAABAAwAAgABAAEAAAABAA0AAgABAAAAAAACAAwAAgAAAAEAAAACAA0AAgAAAAAAAAADAAwAAgABAAEAAAADAA0AAgABAAAAAAAEAAwAAgAAAAEAAAAEAA0AAgAAAAAAAAAFAAwAAgABAAEAAAAFAA0AAgABAAAAAAAGAAwAAgAAAAEAAAAGAA0AAgAAAAAAAAAHAAwAAgABAAEAAAAHAA0AAgABAAAAAAAIAAwAAgAAAAEAAAAIAA0AAgAAAAAAAAAJAAwAAgABAAEAAAAJAA0AAgABAAAAAAAKAAwAAgAAAAEAAAAKAA0AAgAAAAAAAAALAAwAAgABAAEAAAALAA0AAgABAAAAAAAMAAwAAgAAAAEAAAAMAA0AAgAAAAAAAAANAAwAAgABAAEAAAANAA0AAgABAAAAAAAOAAwAAgAAAAEAAAAOAA0AAgAAAAAAAAAPAAwAAgABAAEAAAAPAA0AAgABAAAAAAAQAAwAAgAAAAEAAAAQAA0AAgAAAAAAAAARAAwAAgABAAEAAAARAA0AAgABAAAAAAASAAwAAgAAAAEAAAASAA0AAgAAAAAAAAATAAwAAgABAAEAAAATAA0AAgABAAAAAAASAA4AAgAAAAEAAAASAA8AAgAAAAAAAAATAA4AAgABAAEAAAATAA8AAgABAAAAAAASABAAAgAAAAEAAAASABEAAgAAAAAAAAATABAAAgABAAEAAAATABEAAgABAAAAAAASABIAAgAAAAEAAAASABMAAgAAAAAAAAATABIAAgABAAEAAAATABMAAgABAAAAAAASABQAAgAAAAEAAAASABUAAgAAAAAAAAATABQAAgABAAEAAAATABUAAgABAAAAAAARABQAAgABAAEAAAARABUAAgABAAAAAAAPABQAAgABAAEAAAAPABUAAgABAAAAAAAQABQAAgAAAAEAAAAQABUAAgAAAAAAAAANABQAAgABAAEAAAANABUAAgABAAAAAAAOABQAAgAAAAEAAAAOABUAAgAAAAAAAAALABQAAgABAAEAAAALABUAAgABAAAAAAAMABQAAgAAAAEAAAAMABUAAgAAAAAAAAAJABQAAgABAAEAAAAJABUAAgABAAAAAAAKABQAAgAAAAEAAAAKABUAAgAAAAAAAAAHABQAAgABAAEAAAAHABUAAgABAAAAAAAIABQAAgAAAAEAAAAIABUAAgAAAAAAAAAFABQAAgABAAEAAAAFABUAAgABAAAAAAAGABQAAgAAAAEAAAAGABUAAgAAAAAAAAADABQAAgABAAEAAAADABUAAgABAAAAAAAEABQAAgAAAAEAAAAEABUAAgAAAAAAAAABABQAAgABAAEAAAABABUAAgABAAAAAAACABQAAgAAAAEAAAACABUAAgAAAAAAAAABABIAAgABAAEAAAABABMAAgABAAAAAAACABIAAgAAAAEAAAACABMAAgAAAAAAAAAAABIAAgAAAAEAAAAAABMAAgAAAAAAAAABABAAAgABAAEAAAABABEAAgABAAAAAAACABAAAgAAAAEAAAACABEAAgAAAAAAAAABAA4AAgABAAEAAAABAA8AAgABAAAAAAACAA4AAgAAAAEAAAACAA8AAgAAAAAAAAADABMAAgABAAAAAAAEABMAAgAAAAAAAAADABEAAgABAAAAAAADABIAAgABAAEAAAAEABEAAgAAAAAAAAAEABIAAgAAAAEAAAADAA8AAgABAAAAAAADABAAAgABAAEAAAAEAA8AAgAAAAAAAAAEABAAAgAAAAEAAAADAA4AAgABAAEAAAAEAA4AAgAAAAEAAAAFAA4AAgABAAEAAAAGAA4AAgAAAAEAAAAHAA4AAgABAAEAAAAIAA4AAgAAAAEAAAAJAA4AAgABAAEAAAAKAA4AAgAAAAEAAAALAA4AAgABAAEAAAAMAA4AAgAAAAEAAAANAA4AAgABAAEAAAAOAA4AAgAAAAEAAAAPAA4AAgABAAEAAAAQAA4AAgAAAAEAAAAPAA8AAgABAAAAAAAPABAAAgABAAEAAAAQAA8AAgAAAAAAAAAQABAAAgAAAAEAAAAPABEAAgABAAAAAAAPABIAAgABAAEAAAAQABEAAgAAAAAAAAAQABIAAgAAAAEAAAAPABMAAgABAAAAAAAQABMAAgAAAAAAAAARABEAAgABAAAAAAARABIAAgABAAEAAAARAA8AAgABAAAAAAARABAAAgABAAEAAAANAA8AAgABAAAAAAANABAAAgABAAEAAAAOAA8AAgAAAAAAAAAOABAAAgAAAAEAAAANABEAAgABAAAAAAANABIAAgABAAEAAAAOABEAAgAAAAAAAAAOABIAAgAAAAEAAAARAA4AAgABAAEAAAAMAA8AAgAAAAAAAAAKAA8AAgAAAAAAAAALAA8AAgABAAAAAAAIAA8AAgAAAAAAAAAJAA8AAgABAAAAAAAGAA8AAgAAAAAAAAAHAA8AAgABAAAAAAAFAA8AAgABAAAAAAAAAA4AAgAAAAEAAAAAAA8AAgAAAAAAAAAAABAAAgAAAAEAAAAAABEAAgAAAAAAAAAFABAAAgABAAEAAAAFABEAAgABAAAAAAAGABAAAgAAAAEAAAAGABEAAgAAAAAAAAAHABAAAgABAAEAAAAHABEAAgABAAAAAAAIABAAAgAAAAEAAAAIABEAAgAAAAAAAAAJABAAAgABAAEAAAAJABEAAgABAAAAAAAKABAAAgAAAAEAAAAKABEAAgAAAAAAAAALABAAAgABAAEAAAALABEAAgABAAAAAAAMABAAAgAAAAEAAAAMABEAAgAAAAAAAAARABMAAgABAAAAAAAOABMAAgAAAAAAAAAMABIAAgAAAAEAAAAMABMAAgAAAAAAAAANABMAAgABAAAAAAAKABIAAgAAAAEAAAAKABMAAgAAAAAAAAALABIAAgABAAEAAAALABMAAgABAAAAAAAIABIAAgAAAAEAAAAIABMAAgAAAAAAAAAJABIAAgABAAEAAAAJABMAAgABAAAAAAAGABIAAgAAAAEAAAAGABMAAgAAAAAAAAAHABIAAgABAAEAAAAHABMAAgABAAAAAAAFABIAAgABAAEAAAAFABMAAgABAAAAAAAAABQAAgAAAAEAAAAAABUAAgAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAEAAAABAP7/AAABAAAAAAABAP//AAABAAEAAAAAAPz/AAAAAAAAAAAAAP3/AAAAAAEAAAABAPz/AAABAAAAAAABAP3/AAABAAEAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAEAAAABAPr/AAABAAAAAAABAPv/AAABAAEAAAAAAPj/AAAAAAAAAAAAAPn/AAAAAAEAAAABAPj/AAABAAAAAAABAPn/AAABAAEAAAAAAPb/AAAAAAAAAAAAAPf/AAAAAAEAAAABAPb/AAABAAAAAAABAPf/AAABAAEAAAAAAPT/AAAAAAAAAAAAAPX/AAAAAAEAAAABAPT/AAABAAAAAAABAPX/AAABAAEAAAACAPT/AAAAAAAAAAACAPX/AAAAAAEAAAADAPT/AAABAAAAAAADAPX/AAABAAEAAAAEAPT/AAAAAAAAAAAEAPX/AAAAAAEAAAAFAPT/AAABAAAAAAAFAPX/AAABAAEAAAAGAPT/AAAAAAAAAAAGAPX/AAAAAAEAAAAHAPT/AAABAAAAAAAHAPX/AAABAAEAAAAIAPT/AAAAAAAAAAAIAPX/AAAAAAEAAAAJAPT/AAABAAAAAAAJAPX/AAABAAEAAAAKAPT/AAAAAAAAAAAKAPX/AAAAAAEAAAALAPT/AAABAAAAAAALAPX/AAABAAEAAAAMAPT/AAAAAAAAAAAMAPX/AAAAAAEAAAANAPT/AAABAAAAAAANAPX/AAABAAEAAAAOAPT/AAAAAAAAAAAOAPX/AAAAAAEAAAAPAPT/AAABAAAAAAAPAPX/AAABAAEAAAAQAPT/AAAAAAAAAAAQAPX/AAAAAAEAAAARAPT/AAABAAAAAAARAPX/AAABAAEAAAASAPT/AAAAAAAAAAASAPX/AAAAAAEAAAATAPT/AAABAAAAAAATAPX/AAABAAEAAAASAPb/AAAAAAAAAAASAPf/AAAAAAEAAAATAPb/AAABAAAAAAATAPf/AAABAAEAAAASAPj/AAAAAAAAAAASAPn/AAAAAAEAAAATAPj/AAABAAAAAAATAPn/AAABAAEAAAASAPr/AAAAAAAAAAASAPv/AAAAAAEAAAATAPr/AAABAAAAAAATAPv/AAABAAEAAAASAPz/AAAAAAAAAAASAP3/AAAAAAEAAAATAPz/AAABAAAAAAATAP3/AAABAAEAAAASAP7/AAAAAAAAAAASAP//AAAAAAEAAAATAP7/AAABAAAAAAATAP//AAABAAEAAAAQAP7/AAAAAAAAAAAQAP//AAAAAAEAAAARAP7/AAABAAAAAAARAP//AAABAAEAAAAOAP7/AAAAAAAAAAAOAP//AAAAAAEAAAAPAP7/AAABAAAAAAAPAP//AAABAAEAAAAMAP7/AAAAAAAAAAAMAP//AAAAAAEAAAANAP7/AAABAAAAAAANAP//AAABAAEAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAEAAAALAP7/AAABAAAAAAALAP//AAABAAEAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAEAAAAJAP7/AAABAAAAAAAJAP//AAABAAEAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAEAAAAHAP7/AAABAAAAAAAHAP//AAABAAEAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAEAAAAFAP7/AAABAAAAAAAFAP//AAABAAEAAAACAP7/AAAAAAAAAAACAP//AAAAAAEAAAADAP7/AAABAAAAAAADAP//AAABAAEAAAACAPz/AAAAAAAAAAACAP3/AAAAAAEAAAADAPz/AAABAAAAAAADAP3/AAABAAEAAAACAPr/AAAAAAAAAAACAPv/AAAAAAEAAAADAPr/AAABAAAAAAADAPv/AAABAAEAAAACAPj/AAAAAAAAAAACAPn/AAAAAAEAAAADAPj/AAABAAAAAAADAPn/AAABAAEAAAACAPb/AAAAAAAAAAACAPf/AAAAAAEAAAADAPb/AAABAAAAAAADAPf/AAABAAEAAAAEAPb/AAAAAAAAAAAEAPf/AAAAAAEAAAAFAPb/AAABAAAAAAAFAPf/AAABAAEAAAAGAPb/AAAAAAAAAAAGAPf/AAAAAAEAAAAHAPb/AAABAAAAAAAHAPf/AAABAAEAAAAIAPb/AAAAAAAAAAAIAPf/AAAAAAEAAAAJAPb/AAABAAAAAAAJAPf/AAABAAEAAAAKAPb/AAAAAAAAAAAKAPf/AAAAAAEAAAALAPb/AAABAAAAAAALAPf/AAABAAEAAAAMAPb/AAAAAAAAAAAMAPf/AAAAAAEAAAANAPb/AAABAAAAAAANAPf/AAABAAEAAAAOAPb/AAAAAAAAAAAOAPf/AAAAAAEAAAAPAPb/AAABAAAAAAAPAPf/AAABAAEAAAAQAPb/AAAAAAAAAAAQAPf/AAAAAAEAAAARAPb/AAABAAAAAAARAPf/AAABAAEAAAAQAPj/AAAAAAAAAAAQAPn/AAAAAAEAAAARAPj/AAABAAAAAAARAPn/AAABAAEAAAAQAPr/AAAAAAAAAAAQAPv/AAAAAAEAAAARAPr/AAABAAAAAAARAPv/AAABAAEAAAAQAPz/AAAAAAAAAAAQAP3/AAAAAAEAAAARAPz/AAABAAAAAAARAP3/AAABAAEAAAAOAPz/AAAAAAAAAAAOAP3/AAAAAAEAAAAPAPz/AAABAAAAAAAPAP3/AAABAAEAAAAMAPz/AAAAAAAAAAAMAP3/AAAAAAEAAAANAPz/AAABAAAAAAANAP3/AAABAAEAAAAKAPz/AAAAAAAAAAAKAP3/AAAAAAEAAAALAPz/AAABAAAAAAALAP3/AAABAAEAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAEAAAAJAPz/AAABAAAAAAAJAP3/AAABAAEAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAEAAAAHAPz/AAABAAAAAAAHAP3/AAABAAEAAAAEAPz/AAAAAAAAAAAEAP3/AAAAAAEAAAAFAPz/AAABAAAAAAAFAP3/AAABAAEAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAEAAAAFAPr/AAABAAAAAAAFAPv/AAABAAEAAAAEAPj/AAAAAAAAAAAEAPn/AAAAAAEAAAAFAPj/AAABAAAAAAAFAPn/AAABAAEAAAAGAPj/AAAAAAAAAAAGAPn/AAAAAAEAAAAHAPj/AAABAAAAAAAHAPn/AAABAAEAAAAIAPj/AAAAAAAAAAAIAPn/AAAAAAEAAAAJAPj/AAABAAAAAAAJAPn/AAABAAEAAAAKAPj/AAAAAAAAAAAKAPn/AAAAAAEAAAALAPj/AAABAAAAAAALAPn/AAABAAEAAAAMAPj/AAAAAAAAAAAMAPn/AAAAAAEAAAANAPj/AAABAAAAAAANAPn/AAABAAEAAAAOAPj/AAAAAAAAAAAOAPn/AAAAAAEAAAAPAPj/AAABAAAAAAAPAPn/AAABAAEAAAAOAPr/AAAAAAAAAAAOAPv/AAAAAAEAAAAPAPr/AAABAAAAAAAPAPv/AAABAAEAAAAMAPr/AAAAAAAAAAAMAPv/AAAAAAEAAAANAPr/AAABAAAAAAANAPv/AAABAAEAAAAKAPr/AAAAAAAAAAAKAPv/AAAAAAEAAAALAPr/AAABAAAAAAALAPv/AAABAAEAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAEAAAAJAPr/AAABAAAAAAAJAPv/AAABAAEAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAEAAAAHAPr/AAABAAAAAAAHAPv/AAABAAEAAAASABYAAgAAAAEAAAATABYAAgABAAEAAAAQABYAAgAAAAEAAAARABYAAgABAAEAAAAOABYAAgAAAAEAAAAPABYAAgABAAEAAAAMABYAAgAAAAEAAAANABYAAgABAAEAAAAKABYAAgAAAAEAAAALABYAAgABAAEAAAAIABYAAgAAAAEAAAAJABYAAgABAAEAAAAGABYAAgAAAAEAAAAHABYAAgABAAEAAAAEABYAAgAAAAEAAAAFABYAAgABAAEAAAACABYAAgAAAAEAAAADABYAAgABAAEAAAAAABYAAgAAAAEAAAABABYAAgABAAEAAAA=")
+tile_set = SubResource("TileSet_bsd4d")
+
+[node name="Garden6" parent="GardenView" instance=ExtResource("1_1a6ct")]
+position = Vector2(387, 493)
+
+[node name="WorkshopView" type="Node2D" parent="."]
+position = Vector2(0, 1080)
+
+[node name="Door To Garden" type="TextureButton" parent="WorkshopView"]
+offset_left = 96.0
+offset_top = -6.09159e-05
+offset_right = 128.0
+offset_bottom = 31.9999
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_58e0k")
+
+[node name="Workshop View Label" type="Label" parent="WorkshopView"]
+offset_left = 1316.0
+offset_top = 961.0
+offset_right = 1436.0
+offset_bottom = 984.0
+scale = Vector2(5, 5)
+text = "Workshop View"
+label_settings = SubResource("LabelSettings_iq3td")
+
+[node name="Door To Shop" type="TextureButton" parent="WorkshopView"]
+offset_left = 96.0
+offset_top = 912.0
+offset_right = 128.0
+offset_bottom = 944.0
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_58e0k")
+
+[node name="ShopView" type="Node2D" parent="."]
+position = Vector2(0, 2160)
+
+[node name="Door To Workshop" type="TextureButton" parent="ShopView"]
+offset_left = 96.0
+offset_top = 8.00002
+offset_right = 128.0
+offset_bottom = 40.0
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_58e0k")
+
+[node name="Shop View Label" type="Label" parent="ShopView"]
+offset_left = 1500.0
+offset_top = 957.0
+offset_right = 1581.0
+offset_bottom = 980.0
+scale = Vector2(5, 5)
+text = "Shop View"
+label_settings = SubResource("LabelSettings_gnjca")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="WhiteSeedInventoryBox" parent="UI" instance=ExtResource("8_rvcl8")]
+position = Vector2(923, 114)
+
+[node name="RedSeedInventoryBox" parent="UI" instance=ExtResource("9_hk41p")]
+position = Vector2(1170, 112)
+
+[node name="InventoryBox2" parent="UI" instance=ExtResource("10_xm0as")]
+position = Vector2(1186, 606)
+
+[node name="InventoryBox3" parent="UI" instance=ExtResource("11_78ygq")]
+position = Vector2(950, 606)
+
+[node name="ScreenTransitionAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bsla1")
+}
+
+[node name="Crafting Table" parent="." instance=ExtResource("11_n1xgs")]
+position = Vector2(1653, 115)
+
+[connection signal="pressed" from="GardenView/Door To Workshop" to="." method="GardenViewToWorkshopView"]
+[connection signal="pressed" from="WorkshopView/Door To Garden" to="." method="WorkshopViewToGardenView"]
+[connection signal="pressed" from="WorkshopView/Door To Shop" to="." method="WorkshopViewToShopView"]
+[connection signal="pressed" from="ShopView/Door To Workshop" to="." method="ShopViewToWorkshopView"]

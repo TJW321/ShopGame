@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://yrwqhqii072w"]
+
+[ext_resource type="Script" path="res://Scripts/inventory_box_blue_seed.gd" id="1_u8ffo"]
+[ext_resource type="Texture2D" uid="uid://bvqq3o6rda663" path="res://Textures/Seed Crates/Blue Seed Crate.png" id="2_br5yv"]
+
+[node name="BlueSeedInventoryBox" type="Node2D"]
+
+[node name="Blue Seed" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_u8ffo")
+
+[node name="TextureButton" type="TextureButton" parent="Blue Seed"]
+offset_left = 3.0
+offset_top = 2.2
+offset_right = 35.0
+offset_bottom = 34.2
+texture_normal = ExtResource("2_br5yv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Blue Seed"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Blue Seed/TextureButton" to="Blue Seed" method="_on_texture_button_pressed"]

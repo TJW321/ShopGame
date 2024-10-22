@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6wj15eie8ege"]
 
 [ext_resource type="Script" path="res://Scripts/inventory_box_white_seed.gd" id="1_1djf7"]
-[ext_resource type="Texture2D" uid="uid://d1fqax686o6cd" path="res://Textures/Crate White Seed.png" id="2_cw8oc"]
+[ext_resource type="Texture2D" uid="uid://d0b7jlu0l2ge0" path="res://Textures/Seed Crates/White Seed Crate.png" id="2_cw8oc"]
 
 [node name="WhiteSeedInventoryBox" type="Node2D"]
 

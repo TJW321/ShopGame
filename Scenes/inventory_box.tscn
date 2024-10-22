@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl04sw2tod05c"]
 
 [ext_resource type="Script" path="res://Scripts/inventory_box.gd" id="1_r38l1"]
-[ext_resource type="Texture2D" uid="uid://ddjbrl8rta08h" path="res://Textures/Crate Texture Placeholder.png" id="2_budjd"]
+[ext_resource type="Texture2D" uid="uid://dpc2ke8d5ewso" path="res://Textures/Empty Crate/Empty Crate.png" id="2_budjd"]
 
 [node name="InventoryBox" type="Node2D"]
 

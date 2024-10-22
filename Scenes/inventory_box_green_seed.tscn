@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvvtmmbsclbdv"]
+
+[ext_resource type="Script" path="res://Scripts/inventory_box_green_seed.gd" id="1_4hs5g"]
+[ext_resource type="Texture2D" uid="uid://d4j84psq4us12" path="res://Textures/Seed Crates/Green Seed Crate.png" id="1_ivvne"]
+
+[node name="GreenSeedInventoryBox" type="Node2D"]
+
+[node name="Green  Seed" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_4hs5g")
+
+[node name="TextureButton" type="TextureButton" parent="Green  Seed"]
+offset_left = 3.0
+offset_top = 2.2
+offset_right = 35.0
+offset_bottom = 34.2
+texture_normal = ExtResource("1_ivvne")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Green  Seed"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Green  Seed/TextureButton" to="Green  Seed" method="_on_texture_button_pressed"]
