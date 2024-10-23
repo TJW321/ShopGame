@@ -14,7 +14,7 @@ func _process(_delta: float):
 	$Label.text = str(InventorySingleton.inventory_cherishball_count)
 
 func _on_texture_button_pressed():
-	if InventorySingleton.inventory_cherishball_count == 0 && InventorySingleton.IsItemPickedUp == false
+	if InventorySingleton.inventory_cherishball_count == 0 && InventorySingleton.IsItemPickedUp == false:
 		print("cherishball box is empty chief")
 
 	elif InventorySingleton.inventory_cherishball_count >= 0 && InventorySingleton.IsItemPickedUp == true && InventorySingleton.WhichItem == preload("res://Textures/Pokeballs/Cherish Ball.png"):

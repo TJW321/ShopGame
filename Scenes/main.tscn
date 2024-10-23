@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://ds24mecmnjkor"]
+[gd_scene load_steps=38 format=4 uid="uid://ds24mecmnjkor"]
 
 [ext_resource type="PackedScene" uid="uid://dlbg0rtjqcmbc" path="res://Scenes/garden.tscn" id="1_1a6ct"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o0jmt"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://b0yld2lp1r530" path="res://Scenes/inventory_box_duskball.tscn" id="21_gdyqa"]
 [ext_resource type="PackedScene" uid="uid://ivoppa3328h2" path="res://Scenes/inventory_box_diveball.tscn" id="22_1x3ne"]
 [ext_resource type="PackedScene" uid="uid://bxuc0yn8upwdt" path="res://Scenes/inventory_box_cherishball.tscn" id="23_4c1x8"]
+[ext_resource type="PackedScene" uid="uid://4jreuw2qfae4" path="res://Scenes/Customer.tscn" id="24_46o4v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_78kcn"]
 outline_size = 3
@@ -497,6 +498,8 @@ position = Vector2(1086, 208)
 
 [node name="cherishball Inventory Box2" parent="ShopView" instance=ExtResource("23_4c1x8")]
 position = Vector2(1341, 211)
+
+[node name="Node2D" parent="ShopView" instance=ExtResource("24_46o4v")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 visible = false

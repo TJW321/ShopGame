@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://4jreuw2qfae4"]
+
+[ext_resource type="Script" path="res://Scripts/CustomerOrder.gd" id="1_k5dpq"]
+[ext_resource type="Texture2D" uid="uid://c6csi5ouaj8qe" path="res://Spr_B2W2_Hiker.png" id="2_yf0cg"]
+[ext_resource type="Texture2D" uid="uid://dpc2ke8d5ewso" path="res://Textures/Empty Crate/Empty Crate.png" id="3_5p7w2"]
+[ext_resource type="Script" path="res://Scripts/inventory_box_customer.gd" id="4_kgneb"]
+
+[node name="CustomerNode" type="Node2D"]
+script = ExtResource("1_k5dpq")
+
+[node name="SprB2w2Hiker" type="Sprite2D" parent="."]
+position = Vector2(1786, 950)
+scale = Vector2(5, 5)
+texture = ExtResource("2_yf0cg")
+
+[node name="EmptyCrate" type="TextureButton" parent="."]
+offset_left = 407.0
+offset_top = 585.0
+offset_right = 407.0
+offset_bottom = 585.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("3_5p7w2")
+script = ExtResource("4_kgneb")
+
+[node name="Crate Label 1" type="Label" parent="EmptyCrate"]
+layout_mode = 0
+offset_left = -39.6
+offset_top = 22.8
+offset_right = 0.400002
+offset_bottom = 45.8
+metadata/_edit_use_anchors_ = true
+
+[node name="Quantity in box label 1" type="Label" parent="EmptyCrate"]
+layout_mode = 0
+offset_left = 18.2
+offset_top = -13.2
+offset_right = 58.2
+offset_bottom = 9.8
+
+[node name="EmptyCrate2" type="TextureButton" parent="."]
+offset_left = 916.0
+offset_top = 586.0
+offset_right = 916.0
+offset_bottom = 586.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("3_5p7w2")
+
+[node name="Crate Label 2" type="Label" parent="EmptyCrate2"]
+layout_mode = 0
+offset_left = -28.2
+offset_top = 22.2
+offset_right = 11.8
+offset_bottom = 45.2
+metadata/_edit_use_anchors_ = true
+
+[node name="Quantity in box label 2" type="Label" parent="EmptyCrate2"]
+layout_mode = 0
+offset_left = 19.2
+offset_top = -12.2
+offset_right = 59.2
+offset_bottom = 10.8
+
+[node name="EmptyCrate3" type="TextureButton" parent="."]
+offset_left = 1385.0
+offset_top = 589.0
+offset_right = 1385.0
+offset_bottom = 589.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("3_5p7w2")
+
+[node name="Crate Label 3" type="Label" parent="EmptyCrate3"]
+layout_mode = 0
+offset_left = -23.8
+offset_top = 21.4
+offset_right = 16.2
+offset_bottom = 44.4
+metadata/_edit_use_anchors_ = true
+
+[node name="Quantity in box label 3" type="Label" parent="EmptyCrate3"]
+layout_mode = 0
+offset_left = 22.4
+offset_top = -11.0
+offset_right = 62.4
+offset_bottom = 12.0
+
+[node name="DeliverGoods Button" type="Button" parent="."]
+offset_left = 809.0
+offset_top = 387.0
+offset_right = 920.0
+offset_bottom = 418.0
+scale = Vector2(3, 3)
+text = "Deliver Items"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="DeliverGoods Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
