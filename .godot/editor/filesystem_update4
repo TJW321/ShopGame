@@ -1,12 +1,5 @@
 res://Scenes/main.tscn
 res://Scripts/inventory_box_pokeball.gd
-res://Scripts/InventorySingleton.gd
-res://Scripts/inventory_box_greatball.gd
-res://Scripts/CraftingResult.gd
-res://Scripts/inventory_box_ultraball.gd
-res://Scripts/inventory_box_duskball.gd
-res://Scripts/inventory_box_diveball.gd
-res://Scripts/inventory_box_cherishball.gd
-res://CustomerOrder.gd
 res://Customer.tscn
 res://Scripts/inventory_box_customer.gd
+res://CustomerOrder.gd

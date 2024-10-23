@@ -1,6 +1,7 @@
 extends Node2D
 
-var items = ["Pokeball", "Greatball", "Ultraball", "Duskball", "Diveball", "Cherishball"]
+var items = ["Pokeball"]
+ #"Greatball", "Ultraball", "Duskball", "Diveball", "Cherishball"
 
 var selected_items = {}
 

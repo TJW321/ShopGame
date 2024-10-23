@@ -2,10 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dlbg0rtjqcmbc" path="res://Scenes/garden.tscn" id="1_1a6ct"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o0jmt"]
-[ext_resource type="Texture2D" uid="uid://bqn8180osgama" path="res://Textures/Floors/Workshop Floor Placeholder.png" id="2_kqjqs"]
-[ext_resource type="Texture2D" uid="uid://wh0gdhc8304x" path="res://Textures/Walls and Doors/Door.png" id="3_58e0k"]
-[ext_resource type="Texture2D" uid="uid://bhoolvx7t1dt3" path="res://Textures/Floors/Grass Floor.png" id="5_bcml2"]
-[ext_resource type="Texture2D" uid="uid://bpe06fqkmk35y" path="res://Textures/Floors/Shop Floor Placeholder.png" id="5_uxjy4"]
 [ext_resource type="PackedScene" uid="uid://b6wj15eie8ege" path="res://Scenes/inventory_box_white_seed.tscn" id="8_rvcl8"]
 [ext_resource type="PackedScene" uid="uid://bumsoj1edwtat" path="res://Scenes/inventory_box_red_seed.tscn" id="9_hk41p"]
 [ext_resource type="PackedScene" uid="uid://bq1ka6bwhnha8" path="res://Scenes/inventory_box_Red_Nut.tscn" id="10_xm0as"]
@@ -23,29 +19,41 @@
 [ext_resource type="PackedScene" uid="uid://b0yld2lp1r530" path="res://Scenes/inventory_box_duskball.tscn" id="21_gdyqa"]
 [ext_resource type="PackedScene" uid="uid://ivoppa3328h2" path="res://Scenes/inventory_box_diveball.tscn" id="22_1x3ne"]
 [ext_resource type="PackedScene" uid="uid://bxuc0yn8upwdt" path="res://Scenes/inventory_box_cherishball.tscn" id="23_4c1x8"]
-[ext_resource type="PackedScene" uid="uid://4jreuw2qfae4" path="res://Scenes/Customer.tscn" id="24_46o4v"]
+[ext_resource type="PackedScene" uid="uid://4jreuw2qfae4" path="res://Customer.tscn" id="24_46o4v"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ma3rn"]
+load_path = "res://.godot/imported/Door.png-ebc2a2d5bccb8ef21f9f928a6e694f86.ctex"
 
 [sub_resource type="LabelSettings" id="LabelSettings_78kcn"]
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fv0tu"]
+load_path = "res://.godot/imported/Grass Floor.png-aaff1747d6ded804a9a8726cf59cf22b.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amjua"]
-texture = ExtResource("5_bcml2")
+texture = SubResource("CompressedTexture2D_fv0tu")
 use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5jt4b"]
+load_path = "res://.godot/imported/Workshop Floor Placeholder.png-3c7e5498a20282aabb349d0cf56a11bc.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlhp7"]
-texture = ExtResource("2_kqjqs")
+texture = SubResource("CompressedTexture2D_5jt4b")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ovr2c"]
+load_path = "res://.godot/imported/Shop Floor Placeholder.png-0ff17227b1b9ff369bb6719f7543a33b.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chsbf"]
-texture = ExtResource("5_uxjy4")
+texture = SubResource("CompressedTexture2D_ovr2c")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -324,7 +332,7 @@ offset_right = 128.0
 offset_bottom = 936.0
 scale = Vector2(5, 5)
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_58e0k")
+texture_normal = SubResource("CompressedTexture2D_ma3rn")
 
 [node name="Garden View Label" type="Label" parent="GardenView"]
 offset_left = 1423.0
@@ -395,7 +403,7 @@ offset_right = 128.0
 offset_bottom = 31.9999
 scale = Vector2(5, 5)
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_58e0k")
+texture_normal = SubResource("CompressedTexture2D_ma3rn")
 
 [node name="White Nut Inventory Box" parent="WorkshopView" instance=ExtResource("11_78ygq")]
 position = Vector2(50, 296)
@@ -431,7 +439,7 @@ offset_right = 128.0
 offset_bottom = 944.0
 scale = Vector2(5, 5)
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_58e0k")
+texture_normal = SubResource("CompressedTexture2D_ma3rn")
 
 [node name="Pokeball Boxes" type="Label" parent="WorkshopView"]
 offset_left = 840.0
@@ -470,7 +478,7 @@ offset_right = 128.0
 offset_bottom = 40.0
 scale = Vector2(5, 5)
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_58e0k")
+texture_normal = SubResource("CompressedTexture2D_ma3rn")
 
 [node name="Shop View Label" type="Label" parent="ShopView"]
 offset_left = 1500.0

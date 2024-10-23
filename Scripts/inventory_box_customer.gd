@@ -13,7 +13,7 @@ var inventory_count_greatball = preload("res://Textures/Pokeball Crates/Great Ba
 var inventory_count_ultraball = preload("res://Textures/Pokeball Crates/Ultra Ball Crate.png")
 var inventory_count_pokeball = preload("res://Textures/Pokeball Crates/Poke Ball Crate.png")
 
-@onready var quantitylabel1 = $"EmptyCrate/Quantity in box label 1"
+@onready var quantitylabel1 = $"Quantity in box label 1"
 @onready var quantitylabel2 = $"EmptyCrate2/Quantity in box label 2"
 @onready var quantitylabel3 = $"EmptyCrate3/Quantity in box label 3"
 @onready var crate1 = $EmptyCrate
@@ -29,16 +29,16 @@ func _process(_delta: float):
 	#$Label.text = str(InventorySingleton.inventory_pokeball_count)
 	pass
 
-func _on_texture_button_pressed():
+func _on_pressed():
 	#if the pokeball count is 0 AND there is no item picked up, the box should do nothing
-	if itemstored == "Nothing" && itemstoredcount == 0:
+	if itemstored == "" && itemstoredcount == 0:
 		print("customer box is empty chief")
 		
 	elif InventorySingleton.IsItemPickedUp == true && InventorySingleton.WhichItem == preload("res://Textures/Pokeballs/Poke Ball.png"):
 		itemstored = "Pokeball"
 		itemstoredcount += 1
-		quantitylabel1.text = str(itemstoredcount)
-		crate1.texture_normal = preload("res://Textures/Pokeball Crates/Poke Ball Crate.png")
+		#$"Quantity in box label 1" .text = itemstoredcount
+		#$".".texture = preload("res://Textures/Pokeball Crates/Poke Ball Crate.png")
 		InventorySingleton.WhichItem = null
 		InventorySingleton.IsItemPickedUp = false
 		InventorySingleton._process(1)
@@ -47,7 +47,7 @@ func _on_texture_button_pressed():
 		itemstored = "Pokeball"
 		itemstoredcount += 1
 		quantitylabel1.text = str(itemstoredcount)
-		crate1.texture_normal = preload("res://Textures/Pokeball Crates/Poke Ball Crate.png")
+		crate2.texture_normal = preload("res://Textures/Pokeball Crates/Poke Ball Crate.png")
 		InventorySingleton.WhichItem = null
 		InventorySingleton.IsItemPickedUp = false
 		InventorySingleton._process(1)
