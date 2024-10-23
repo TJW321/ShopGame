@@ -1,35 +1,56 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729630433
-::res://Scenes/::1729635284
-Crafting Table.tscn::PackedScene::4323392742361226901::1729634880::0::1::::<><>::res://Scripts/CraftingBoxOne.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png<>res://Scripts/CraftingBoxTwo.gd<>res://Scripts/CraftingResult.gd
+::res://::1729693686
+Customer.tscn::PackedScene::2055096283043161133::1729693686::0::1::::<><>::res://CustomerOrder.gd<>uid://c6csi5ouaj8qe::::res://Spr_B2W2_Hiker.png<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+CustomerOrder.gd::GDScript::-1::1729693685::0::1::::<>Node2D<>::
+Spr_B2W2_Hiker.png::CompressedTexture2D::6953933066131228144::1729691346::1729691349::1::::<><>::
+::res://Scenes/::1729693820
+Crafting Table.tscn::PackedScene::4323392742361226901::1729677608::0::1::::<><>::res://Scripts/CraftingBoxOne.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png<>res://Scripts/CraftingBoxTwo.gd<>res://Scripts/CraftingResult.gd
 garden.tscn::PackedScene::7933813578334569412::1729629732::0::1::::<><>::res://Scripts/plot.gd<>uid://77iggvo3wqqt::::res://Textures/Plots/Untilled Plot Placeholder.png
 inventory_box.tscn::PackedScene::5598322226442120314::1729629671::0::1::::<><>::res://Scripts/inventory_box.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
-inventory_box_blue_Nut.tscn::PackedScene::7038352322719590103::1729635284::0::1::::<><>::res://Scripts/inventory_box_white_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
-inventory_box_blue_seed.tscn::PackedScene::1720991408430650228::1729634880::0::1::::<><>::res://Scripts/inventory_box_blue_seed.gd<>uid://bvqq3o6rda663::::res://Textures/Seed Crates/Blue Seed Crate.png
-inventory_box_green_seed.tscn::PackedScene::8677755385348610167::1729635086::0::1::::<><>::res://Scripts/inventory_box_green_seed.gd<>uid://d4j84psq4us12::::res://Textures/Seed Crates/Green Seed Crate.png
-inventory_box_Red_Nut.tscn::PackedScene::3563724804212949653::1729634880::0::1::::<><>::res://Scripts/inventory_box_red_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_blue_Nut.tscn::PackedScene::7038352322719590103::1729635445::0::1::::<><>::res://Scripts/inventory_box_blue_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_blue_seed.tscn::PackedScene::1720991408430650228::1729635445::0::1::::<><>::res://Scripts/inventory_box_blue_seed.gd<>uid://bvqq3o6rda663::::res://Textures/Seed Crates/Blue Seed Crate.png
+inventory_box_cherishball.tscn::PackedScene::4042219003451768425::1729681937::0::1::::<><>::res://Scripts/inventory_box_cherishball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_diveball.tscn::PackedScene::605740295907779365::1729681937::0::1::::<><>::res://Scripts/inventory_box_diveball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_duskball.tscn::PackedScene::4191361520883773457::1729681937::0::1::::<><>::res://Scripts/inventory_box_duskball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_greatball.tscn::PackedScene::5251201613096375160::1729680918::0::1::::<><>::res://Scripts/inventory_box_greatball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_green_Nut.tscn::PackedScene::6598867208573802520::1729672272::0::1::::<><>::res://Scripts/inventory_box_green_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_green_seed.tscn::PackedScene::8677755385348610167::1729635445::0::1::::<><>::res://Scripts/inventory_box_green_seed.gd<>uid://d4j84psq4us12::::res://Textures/Seed Crates/Green Seed Crate.png
+inventory_box_pokeball.tscn::PackedScene::7769279703370546459::1729680688::0::1::::<><>::res://Scripts/inventory_box_pokeball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_Red_Nut.tscn::PackedScene::3563724804212949653::1729635445::0::1::::<><>::res://Scripts/inventory_box_red_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
 inventory_box_red_seed.tscn::PackedScene::3816088509548634431::1729629749::0::1::::<><>::res://Scripts/inventory_box_red_seed.gd<>uid://bodjbiiwblie1::::res://Textures/Seed Crates/Red Seed Crate.png
-inventory_box_White_Nut.tscn::PackedScene::2811144219576760508::1729634880::0::1::::<><>::res://Scripts/inventory_box_white_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_ultraball.tscn::PackedScene::6281641554242031996::1729681937::0::1::::<><>::res://Scripts/inventory_box_ultraball.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_White_Nut.tscn::PackedScene::2811144219576760508::1729635445::0::1::::<><>::res://Scripts/inventory_box_white_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
 inventory_box_white_seed.tscn::PackedScene::4608285612887698088::1729629697::0::1::::<><>::res://Scripts/inventory_box_white_seed.gd<>uid://d0b7jlu0l2ge0::::res://Textures/Seed Crates/White Seed Crate.png
-inventory_box_yellow_seed.tscn::PackedScene::5079064630498011430::1729635231::0::1::::<><>::uid://dcd164hp24evm::::res://Textures/Seed Crates/Yellow Seed Crate.png<>res://Scripts/inventory_box_yellow_seed.gd
-main.tscn::PackedScene::8480181871986558893::1729635233::0::1::::<><>::uid://dlbg0rtjqcmbc::::res://Scenes/garden.tscn<>res://Scripts/main.gd<>uid://bqn8180osgama::::res://Textures/Floors/Workshop Floor Placeholder.png<>uid://wh0gdhc8304x::::res://Textures/Walls and Doors/Door.png<>uid://bhoolvx7t1dt3::::res://Textures/Floors/Grass Floor.png<>uid://bpe06fqkmk35y::::res://Textures/Floors/Shop Floor Placeholder.png<>uid://b6wj15eie8ege::::res://Scenes/inventory_box_white_seed.tscn<>uid://bumsoj1edwtat::::res://Scenes/inventory_box_red_seed.tscn<>uid://bq1ka6bwhnha8::::res://Scenes/inventory_box_Red_Nut.tscn<>uid://bgb0ettwjccie::::res://Scenes/inventory_box_White_Nut.tscn<>uid://yrwqhqii072w::::res://Scenes/inventory_box_blue_seed.tscn<>uid://b2ujv8yi71wwb::::res://Scenes/Crafting Table.tscn<>uid://dvvtmmbsclbdv::::res://Scenes/inventory_box_green_seed.tscn
-::res://Scripts/::1729635218
-CraftingBoxOne.gd::GDScript::-1::1729630789::0::1::::<>Area2D<>::
-CraftingBoxTwo.gd::GDScript::-1::1729630789::0::1::::<>Area2D<>::
-CraftingResult.gd::GDScript::-1::1729634329::0::1::::<>Area2D<>::
-InventorySingleton.gd::GDScript::-1::1729634932::0::1::::<>Node2D<>::
+inventory_box_yellow_Nut.tscn::PackedScene::2158205297991786713::1729672502::0::1::::<><>::res://Scripts/inventory_box_yellow_nut.gd<>uid://dpc2ke8d5ewso::::res://Textures/Empty Crate/Empty Crate.png
+inventory_box_yellow_seed.tscn::PackedScene::5079064630498011430::1729635445::0::1::::<><>::uid://dcd164hp24evm::::res://Textures/Seed Crates/Yellow Seed Crate.png<>res://Scripts/inventory_box_yellow_seed.gd
+main.tscn::PackedScene::8480181871986558893::1729693686::0::1::::<><>::uid://dlbg0rtjqcmbc::::res://Scenes/garden.tscn<>res://Scripts/main.gd<>uid://bqn8180osgama::::res://Textures/Floors/Workshop Floor Placeholder.png<>uid://wh0gdhc8304x::::res://Textures/Walls and Doors/Door.png<>uid://bhoolvx7t1dt3::::res://Textures/Floors/Grass Floor.png<>uid://bpe06fqkmk35y::::res://Textures/Floors/Shop Floor Placeholder.png<>uid://b6wj15eie8ege::::res://Scenes/inventory_box_white_seed.tscn<>uid://bumsoj1edwtat::::res://Scenes/inventory_box_red_seed.tscn<>uid://bq1ka6bwhnha8::::res://Scenes/inventory_box_Red_Nut.tscn<>uid://bgb0ettwjccie::::res://Scenes/inventory_box_White_Nut.tscn<>uid://yrwqhqii072w::::res://Scenes/inventory_box_blue_seed.tscn<>uid://b2ujv8yi71wwb::::res://Scenes/Crafting Table.tscn<>uid://dvvtmmbsclbdv::::res://Scenes/inventory_box_green_seed.tscn<>uid://cemlpm8jkxva1::::res://Scenes/inventory_box_yellow_seed.tscn<>uid://c7jovtn80e53x::::res://Scenes/inventory_box_blue_Nut.tscn<>uid://c1asm46c81rwi::::res://Scenes/inventory_box_green_Nut.tscn<>uid://50plc10uql3v::::res://Scenes/inventory_box_yellow_Nut.tscn<>uid://dixq5wi27n1kx::::res://Scenes/inventory_box_pokeball.tscn<>uid://cg2yr2abry6h5::::res://Scenes/inventory_box_greatball.tscn<>uid://cvq4yo0nh6cmu::::res://Scenes/inventory_box_ultraball.tscn<>uid://b0yld2lp1r530::::res://Scenes/inventory_box_duskball.tscn<>uid://ivoppa3328h2::::res://Scenes/inventory_box_diveball.tscn<>uid://bxuc0yn8upwdt::::res://Scenes/inventory_box_cherishball.tscn
+::res://Scripts/::1729691288
+CraftingBoxOne.gd::GDScript::-1::1729672705::0::1::::<>Area2D<>::
+CraftingBoxTwo.gd::GDScript::-1::1729672798::0::1::::<>Area2D<>::
+CraftingResult.gd::GDScript::-1::1729687015::0::1::::<>Area2D<>::
+InventorySingleton.gd::GDScript::-1::1729686566::0::1::::<>Node2D<>::
 inventory_box.gd::GDScript::-1::1729443676::0::1::::<>Area2D<>::
+inventory_box_blue_nut.gd::GDScript::-1::1729635408::0::1::::<>Area2D<>::
 inventory_box_blue_seed.gd::GDScript::-1::1729634774::0::1::::<>Area2D<>::
+inventory_box_cherishball.gd::GDScript::-1::1729691288::0::1::::<>Area2D<>::
+inventory_box_diveball.gd::GDScript::-1::1729691228::0::1::::<>Area2D<>::
+inventory_box_duskball.gd::GDScript::-1::1729691176::0::1::::<>Area2D<>::
+inventory_box_greatball.gd::GDScript::-1::1729686894::0::1::::<>Area2D<>::
+inventory_box_green_nut.gd::GDScript::-1::1729672253::0::1::::<>Area2D<>::
 inventory_box_green_seed.gd::GDScript::-1::1729635070::0::1::::<>Area2D<>::
+inventory_box_pokeball.gd::GDScript::-1::1729687664::0::1::::<>Area2D<>::
 inventory_box_red_nut.gd::GDScript::-1::1729630708::0::1::::<>Area2D<>::
 inventory_box_red_seed.gd::GDScript::-1::1729628049::0::1::::<>Area2D<>::
+inventory_box_ultraball.gd::GDScript::-1::1729691176::0::1::::<>Area2D<>::
 inventory_box_white_nut.gd::GDScript::-1::1729627979::0::1::::<>Area2D<>::
 inventory_box_white_seed.gd::GDScript::-1::1729627808::0::1::::<>Area2D<>::
+inventory_box_yellow_nut.gd::GDScript::-1::1729672463::0::1::::<>Area2D<>::
 inventory_box_yellow_seed.gd::GDScript::-1::1729635218::0::1::::<>Area2D<>::
 main.gd::GDScript::-1::1729435166::0::1::::<>Node<>::
-plot.gd::GDScript::-1::1729630234::0::1::::<>Area2D<>::
-::res://Textures/::1729627861
+plot.gd::GDScript::-1::1729676424::0::1::::<>Area2D<>::
+::res://Textures/::1729684903
 icon.svg::CompressedTexture2D::3057003702001088762::1728906802::1729451619::1::::<><>::
+Nothing.png::CompressedTexture2D::7980825164465600437::1729684900::1729684903::1::::<><>::
 ::res://Textures/Empty Crate/::1729627906
 Empty Crate.png::CompressedTexture2D::8217880939150177898::1729627906::1729627906::1::::<><>::
 ::res://Textures/Floors/::1729623733
@@ -84,7 +105,7 @@ Dusk Ball Crate.png::CompressedTexture2D::4893936853597740350::1729626829::17296
 Great Ball Crate.png::CompressedTexture2D::2004722111760600951::1729626829::1729626976::1::::<><>::
 Poke Ball Crate.png::CompressedTexture2D::730885090274806723::1729626829::1729627003::1::::<><>::
 Ultra Ball Crate.png::CompressedTexture2D::8396560825963861803::1729626829::1729627045::1::::<><>::
-::res://Textures/Pokeballs/::1729627683
+::res://Textures/Pokeballs/::1729691349
 Cherish Ball.png::CompressedTexture2D::1699775861426139901::1729626829::1729626899::1::::<><>::
 Dive Ball.png::CompressedTexture2D::4095333188499588303::1729626829::1729626899::1::::<><>::
 Dusk Ball.png::CompressedTexture2D::3137938271815685879::1729626829::1729626903::1::::<><>::

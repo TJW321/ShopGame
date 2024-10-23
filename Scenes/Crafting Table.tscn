@@ -29,7 +29,7 @@ text = "0"
 metadata/_edit_use_anchors_ = true
 
 [node name="Crafting Box Two" type="Area2D" parent="."]
-position = Vector2(-1, 242)
+position = Vector2(282, 1.52588e-05)
 scale = Vector2(5, 5)
 script = ExtResource("3_qgtrl")
 metadata/_edit_group_ = true
@@ -51,7 +51,7 @@ text = "0"
 metadata/_edit_use_anchors_ = true
 
 [node name="Crafting Result" type="Area2D" parent="."]
-position = Vector2(1, 655)
+position = Vector2(843, -5.99994)
 scale = Vector2(5, 5)
 script = ExtResource("4_p5je0")
 metadata/_edit_group_ = true
@@ -73,10 +73,10 @@ text = "0"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1.0
-offset_top = 487.0
-offset_right = 135.0
-offset_bottom = 518.0
+offset_left = 553.0
+offset_top = 57.0
+offset_right = 687.0
+offset_bottom = 88.0
 scale = Vector2(2, 2)
 text = "PRESS TO CRAFT"
 

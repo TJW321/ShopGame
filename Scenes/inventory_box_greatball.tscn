@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg2yr2abry6h5"]
+
+[ext_resource type="Script" path="res://Scripts/inventory_box_greatball.gd" id="1_ts62p"]
+[ext_resource type="Texture2D" uid="uid://dpc2ke8d5ewso" path="res://Textures/Empty Crate/Empty Crate.png" id="2_e1dvf"]
+
+[node name="Greatball Inventory Box" type="Node2D"]
+
+[node name="InventoryBox" type="Area2D" parent="."]
+scale = Vector2(5, 5)
+script = ExtResource("1_ts62p")
+
+[node name="TextureButton" type="TextureButton" parent="InventoryBox"]
+offset_left = 0.2
+offset_top = 0.4
+offset_right = 32.2
+offset_bottom = 32.4
+texture_normal = ExtResource("2_e1dvf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="InventoryBox"]
+offset_left = 37.4
+offset_top = 6.4
+offset_right = 77.4
+offset_bottom = 29.4
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="InventoryBox/TextureButton" to="InventoryBox" method="_on_texture_button_pressed"]
